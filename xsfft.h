@@ -15,30 +15,30 @@
 
 // Complex array creation/destruction
 
-xsComplex *xsAllocArrayDouble(double *data, unsigned long dataLength);
-xsComplex *xsAllocArrayFloat(float *data, unsigned long dataLength);
-xsComplex *xsAllocArrayLong(long *data, unsigned long dataLength);
-xsComplex *xsAllocArrayInt(int *data, unsigned long dataLength);
-xsComplex *xsAllocArrayShort(short *data, unsigned long dataLength);
-xsComplex *xsAllocArrayChar(char *data, unsigned long dataLength);
+xsComplex *xsAllocArrayDouble(double *data, long dataLength);
+xsComplex *xsAllocArrayFloat(float *data, long dataLength);
+xsComplex *xsAllocArrayLong(long *data, long dataLength);
+xsComplex *xsAllocArrayInt(int *data, long dataLength);
+xsComplex *xsAllocArrayShort(short *data, long dataLength);
+xsComplex *xsAllocArrayChar(char *data, long dataLength);
 
 void xsFreeArray(xsComplex *data);
 
 // Find the next power of two for a given number
 
-unsigned long xsNextPowerOfTwo(const unsigned long value);
+long xsNextPowerOfTwo(const long value);
 
 // Ensure power of 2 number of input
 
-xsComplex *xsCoerceDataRadix2(xsComplex *data, unsigned long *dataLength);
+xsComplex *xsCoerceDataRadix2(xsComplex *data, long *dataLength);
 
 // FFT and IFFT
 
-int xsFFT(xsComplex *data, const unsigned long dataLength, const unsigned long maxFrequency);
-int xsIFFT(xsComplex *data, const unsigned long dataLength, const unsigned long maxFrequency);
+int xsFFT(xsComplex *data, const long dataLength, const long maxFrequency);
+int xsIFFT(xsComplex *data, const long dataLength, const long maxFrequency);
 
 // Useful functions that utilize FFTs
 
-xsComplex *xsInterpolateWithFactor2(xsComplex *data, unsigned long *dataLength);
+xsComplex *xsInterpolateWithFactor2(xsComplex *data, long *dataLength);
 
 #endif
